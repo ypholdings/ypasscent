@@ -1,0 +1,240 @@
+/* 全域樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 導航欄 */
+header {
+    background: #1a237e;
+    color: white;
+    padding: 18px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 22px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffc107;
+    color: #1a237e;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffd54f;
+}
+
+/* 業務區塊 */
+.services {
+    padding: 80px 0;
+    text-align: center;
+    background: white;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #1a237e;
+}
+
+.service-box {
+    width: 31%;
+    display: inline-block;
+    padding: 30px;
+    background: #f1f3ff;
+    border-radius: 8px;
+    margin: 0 1%;
+    vertical-align: top;
+}
+
+.service-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1a237e;
+}
+
+/* 內頁內容 */
+.page-content {
+    padding: 60px 0;
+    background: white;
+    min-height: 60vh;
+}
+
+.page-content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1a237e;
+}
+
+.page-content p {
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.idea-list {
+    margin-left: 20px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* 投資領域樣式 */
+.investment-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.invest-card, .team-card {
+    background: #f1f3ff;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #1a237e;
+}
+
+.invest-card h3, .team-card h3 {
+    font-size: 20px;
+    color: #1a237e;
+    margin-bottom: 12px;
+}
+
+.invest-card p, .team-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* 聯絡資訊 */
+.contact-info {
+    background: #f1f3ff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    line-height: 2;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #1a237e;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 頁腳 */
+footer {
+    background: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 30px;
+}
+
+/* 響應式 */
+@media(max-width:992px) {
+    .investment-grid, .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .service-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .investment-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .logo {
+        display: block;
+        text-align: center;
+    }
+    nav ul li {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
