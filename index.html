@@ -1,61 +1,219 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YP Ascent Partner | 投資控股公司</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YP Ascent Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 導航欄 -->
-    <header>
-        <div class="container">
-            <div class="logo">YP Ascent Partner</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">首頁</a></li>
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="investment.html">投資領域</a></li>
-                    <li><a href="team.html">團隊介紹</a></li>
-                    <li><a href="contact.html">聯絡我們</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- 首頁Banner -->
-    <section class="banner">
-        <div class="container">
-            <h1>專業投資控股 · 穩健價值創造</h1>
-            <p>YP Ascent Partner 致力於全球資產配置與長期價值投資</p>
-            <a href="about.html" class="btn">瞭解更多</a>
-        </div>
-    </section>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">YP Ascent <span>Partners</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="#why">Why Join</a></li>
+    <li><a href="#roles">Open Roles</a></li>
+    <li><a href="about.html#culture">Culture</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get in Touch</a>
+</nav>
 
-    <!-- 核心業務 -->
-    <section class="services">
-        <div class="container">
-            <h2>核心業務</h2>
-            <div class="service-box">
-                <h3>股權投資</h3>
-                <p>專注高潛力企業長期股權投資與策略佈局</p>
-            </div>
-            <div class="service-box">
-                <h3>資產管理</h3>
-                <p>專業資產配置、風險控管與投資組合優化</p>
-            </div>
-            <div class="service-box">
-                <h3>併購諮詢</h3>
-                <p>企業併購、重組與財務策略諮詢服務</p>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div style="margin-bottom:28px; opacity:0; animation: fadeUp 0.8s 0.05s forwards;">
+      <svg width="140" height="60" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#d4b07a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#b8965a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8a6e3a;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e8e0d0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#a09880;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <text x="4" y="52"
+          font-family="'Cormorant Garamond', 'Noto Serif TC', serif"
+          font-size="52"
+          font-weight="300"
+          fill="url(#goldGrad)">揚</text>
+        <text x="70" y="52"
+          font-family="'Cormorant Garamond', 'Noto Serif TC', serif"
+          font-size="52"
+          font-weight="300"
+          fill="url(#goldGrad)">沛</text>
+        <line x1="4" y1="57" x2="136" y2="57" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="138" cy="57" r="1.5" fill="#b8965a" opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="hero-eyebrow">Singapore · Taipei · Est. Family Office</div>
+    <h1 class="hero-title">Where <em>Capital</em><br>Meets Intelligence</h1>
+    <p class="hero-desc">YP Ascent Partners manages a Singapore-based family office fund. We are building a lean, exceptional team at the intersection of financial markets and emerging technology.</p>
+    <div class="hero-actions">
+      <a href="#roles" class="btn-primary">Explore Opportunities</a>
+      <a href="about.html" class="btn-ghost">Our Story</a>
+    </div>
+    <div class="hero-bottom-bar">
+      <span class="location-tag">Taipei · World Trade Center &nbsp;<span>|</span>&nbsp; Singapore · Registered Fund</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="stat-num">AUM<span>+</span></div>
+        <div class="stat-label">Long-term Capital</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">AI<span>/</span>FinTech</div>
+        <div class="stat-label">Core Focus Areas</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">2<span>×</span></div>
+        <div class="stat-label">Markets: SG + TW</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">IB<span>+</span></div>
+        <div class="stat-label">Compensation</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 頁腳 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 YP Ascent Partner. All Rights Reserved.</p>
+<div class="section-divider"></div>
+
+<!-- WHY JOIN -->
+<section class="why" id="why">
+  <div class="why-header">
+    <h2 class="why-title reveal">Better Than<br><em>Investment Banking</em></h2>
+    <p class="why-subtitle reveal">We offer the intellectual rigour of top-tier finance — without the politics, the face-time culture, or the ceiling.</p>
+  </div>
+  <div class="perks-grid">
+    <div class="perk reveal">
+      <div class="perk-num">01</div>
+      <div class="perk-title">Above-Market Compensation</div>
+      <div class="perk-body">Base salary and performance bonus structured to exceed bulge-bracket investment bank packages at equivalent levels. No capped pots. No arbitrary calibration committees.</div>
+    </div>
+    <div class="perk reveal">
+      <div class="perk-num">02</div>
+      <div class="perk-title">Direct Impact & Ownership</div>
+      <div class="perk-body">Small, high-calibre team means your work is visible at the principal level from day one. Your models, your code, and your ideas shape real capital allocation decisions.</div>
+    </div>
+    <div class="perk reveal">
+      <div class="perk-num">03</div>
+      <div class="perk-title">Flexibility & Autonomy</div>
+      <div class="perk-body">Results-oriented culture. No rigid hierarchy, no mandated face-time. We care deeply about outcomes — not where you sit or when you log on.</div>
+    </div>
+    <div class="perk reveal">
+      <div class="perk-num">04</div>
+      <div class="perk-title">Cutting-Edge Tooling</div>
+      <div class="perk-body">We invest in the best infrastructure. From proprietary data pipelines to frontier AI models, you'll work with tools that most institutions are still building approval workflows for.</div>
+    </div>
+    <div class="perk reveal">
+      <div class="perk-num">05</div>
+      <div class="perk-title">Cross-Market Exposure</div>
+      <div class="perk-body">Gain rare exposure to both Singapore's financial hub and Taiwan's technology ecosystem — a unique vantage point across capital markets and deep tech.</div>
+    </div>
+    <div class="perk reveal">
+      <div class="perk-num">06</div>
+      <div class="perk-title">Long-Term Partnership</div>
+      <div class="perk-body">We are not a two-year analyst programme. We invest in people for the long haul. Top performers grow into principals. Exceptional contributors share in our success.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section class="roles" id="roles">
+  <div class="roles-header">
+    <h2 class="roles-title reveal">Open<br><em>Positions</em></h2>
+    <p class="roles-intro reveal">We are selectively growing our team. We look for rare individuals who combine deep quantitative rigour with genuine intellectual curiosity — people who see AI not as a tool but as a lens.</p>
+  </div>
+  <div class="role-list">
+    <a href="contact.html" class="role-item reveal">
+      <div>
+        <div class="role-dept">Technology</div>
+        <div class="role-name">Senior AI / ML Engineer</div>
+      </div>
+      <div class="role-right">
+        <div class="role-tags">
+          <span>LLM</span><span>Python</span><span>Finance</span>
         </div>
-    </footer>
+        <div class="role-loc">📍 Taipei / Remote</div>
+        <div class="role-arrow">→</div>
+      </div>
+    </a>
+    <a href="contact.html" class="role-item reveal">
+      <div>
+        <div class="role-dept">FinTech</div>
+        <div class="role-name">FinTech Product Strategist</div>
+      </div>
+      <div class="role-right">
+        <div class="role-tags">
+          <span>Payments</span><span>Embedded Finance</span><span>Asia</span>
+        </div>
+        <div class="role-loc">📍 Singapore / Taipei</div>
+        <div class="role-arrow">→</div>
+      </div>
+    </a>
+    <a href="contact.html" class="role-item reveal">
+      <div>
+        <div class="role-dept">Investments</div>
+        <div class="role-name">Quantitative Analyst</div>
+      </div>
+      <div class="role-right">
+        <div class="role-tags">
+          <span>Quant</span><span>Alternative Data</span><span>Risk</span>
+        </div>
+        <div class="role-loc">📍 Singapore</div>
+        <div class="role-arrow">→</div>
+      </div>
+    </a>
+    <a href="contact.html" class="role-item reveal">
+      <div>
+        <div class="role-dept">Technology</div>
+        <div class="role-name">FinTech Infrastructure Engineer</div>
+      </div>
+      <div class="role-right">
+        <div class="role-tags">
+          <span>Cloud</span><span>API</span><span>Data Pipelines</span>
+        </div>
+        <div class="role-loc">📍 Taipei / Remote</div>
+        <div class="role-arrow">→</div>
+      </div>
+    </a>
+    <a href="contact.html" class="role-item reveal">
+      <div>
+        <div class="role-dept">Operations</div>
+        <div class="role-name">Investment Operations Associate</div>
+      </div>
+      <div class="role-right">
+        <div class="role-tags">
+          <span>Fund Ops</span><span>Compliance</span><span>SG</span>
+        </div>
+        <div class="role-loc">📍 Singapore</div>
+        <div class="role-arrow">→</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">YP Ascent <span>Partners</span></div>
+  <div class="footer-copy">© 2025 YP Ascent Partners Limited. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="#roles">Careers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

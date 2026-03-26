@@ -1,54 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯絡我們 - YP Ascent Partner</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — YP Ascent Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">YP Ascent Partner</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="investment.html">投資領域</a></li>
-                    <li><a href="team.html">團隊介紹</a></li>
-                    <li><a href="contact.html" class="active">聯絡我們</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="page-content">
-        <div class="container">
-            <h1>聯絡我們</h1>
-            <div class="contact-info">
-                <p><strong>公司名稱：</strong>YP Ascent Partner</p>
-                <p><strong>業務屬性：</strong>投資控股公司</p>
-                <p><strong>電子郵件：</strong>contact@ypascentpartner.com</p>
-                <p><strong>營業時間：</strong>週一至週五 9:00 - 18:00</p>
-                <p><strong>公司地址：</strong>亞洲 國際金融中心（可自行修改）</p>
-            </div>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">YP Ascent <span>Partners</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#why">Why Join</a></li>
+    <li><a href="index.html#roles">Open Roles</a></li>
+    <li><a href="about.html#culture">Culture</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get in Touch</a>
+</nav>
 
-            <div class="contact-form">
-                <h2>諮詢表單</h2>
-                <form>
-                    <input type="text" placeholder="您的姓名" required>
-                    <input type="email" placeholder="您的信箱" required>
-                    <textarea placeholder="諮詢內容" rows="5" required></textarea>
-                    <button type="submit" class="btn">送出訊息</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-label">04 — Contact</div>
+  <h1 class="page-hero-title">Ready to<br><em>Talk?</em></h1>
+</div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 YP Ascent Partner. All Rights Reserved.</p>
-        </div>
-    </footer>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div>
+    <p class="contact-sub reveal">We review every submission personally. If your background aligns with what we're building, you'll hear from us directly — not a recruiter.</p>
+    <div class="contact-details">
+      <div class="reveal">
+        <div class="contact-detail-label">Taipei Office</div>
+        <div class="contact-detail-val">World Trade Center, Taipei, Taiwan</div>
+      </div>
+      <div class="reveal">
+        <div class="contact-detail-label">Registered Fund</div>
+        <div class="contact-detail-val">Singapore, Republic of Singapore</div>
+      </div>
+      <div class="reveal">
+        <div class="contact-detail-label">Careers</div>
+        <div class="contact-detail-val"><a href="mailto:hr@ypascent.com">hr@ypascent.com</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form reveal">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-input" placeholder="Jane">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-input" placeholder="Chen">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-input" placeholder="jane@example.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Role of Interest</label>
+      <input type="text" class="form-input" placeholder="e.g. Senior AI Engineer">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tell us about yourself</label>
+      <textarea class="form-textarea" placeholder="Your background, what you're working on, and why YP Ascent..."></textarea>
+    </div>
+    <button class="form-submit">Submit Application</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">YP Ascent <span>Partners</span></div>
+  <div class="footer-copy">© 2025 YP Ascent Partners Limited. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="index.html#roles">Careers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
