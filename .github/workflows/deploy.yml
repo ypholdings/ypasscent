@@ -1,0 +1,24 @@
+name: Deploy Frontend
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        # 關鍵點：在這裡注入環境變數
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }} 
+        run: |
+          npm install
+          npm run build # 編譯時會將變數寫入靜態檔案
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # 您的編譯輸出資料夾
