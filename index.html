@@ -39,16 +39,22 @@
             <stop offset="100%" style="stop-color:#a09880;stop-opacity:1" />
           </linearGradient>
         </defs>
-        <text x="4" y="52"
-          font-family="'Cormorant Garamond', 'Noto Serif TC', serif"
-          font-size="52"
-          font-weight="300"
-          fill="url(#goldGrad)">揚</text>
-        <text x="70" y="52"
-          font-family="'Cormorant Garamond', 'Noto Serif TC', serif"
-          font-size="52"
-          font-weight="300"
-          fill="url(#goldGrad)">沛</text>
+        <style>
+        /* 这个 class 只有你指定的字会用，不会影响别人 */
+        .yangpei-gold {
+          font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+          font-size: 52px;
+          font-weight: 300;
+          background: linear-gradient(135deg, #FFF8CC, #FFD700, #D4AF37);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        </style>
+        
+        <!-- 只有这两个字会变 -->
+        <span class="yangpei-gold" style="margin-left:4px;">揚</span>
+        <span class="yangpei-gold" style="margin-left:16px;">沛</span>
         <line x1="4" y1="57" x2="136" y2="57" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
         <circle cx="138" cy="57" r="1.5" fill="#b8965a" opacity="0.8"/>
       </svg>
