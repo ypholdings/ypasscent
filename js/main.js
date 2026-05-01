@@ -67,11 +67,25 @@ reveals.forEach(el => observer.observe(el));
 
 // EmailJS initialization and form submission
 (function() {
-  emailjs.init("1bDA6vW1zOjHQYXeL");
+  // Wait for EmailJS to be loaded
+  if (window.emailjs) {
+    emailjs.init("1bDA6vW1zOjHQYXeL");
+  } else {
+    // If EmailJS isn't loaded yet, wait for it
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.emailjs) {
+        emailjs.init("1bDA6vW1zOjHQYXeL");
+      }
+    });
+  }
 })();
 
 function sendEmail(event) {
   event.preventDefault();
+  if (!window.emailjs) {
+    alert('Email service is not loaded yet. Please try again.');
+    return;
+  }
   emailjs.sendForm('service_ilp7779', 'template_kkr3z12', event.target)
     .then(function() {
       alert('Application submitted successfully! We will get back to you soon.');
