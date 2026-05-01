@@ -67,23 +67,32 @@ reveals.forEach(el => observer.observe(el));
 
 // EmailJS initialization and form submission
 (function() {
-  // Wait for EmailJS to be loaded
-  if (window.emailjs) {
-    emailjs.init("1bDA6vW1zOjHQYXeL");
-  } else {
-    // If EmailJS isn't loaded yet, wait for it
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.emailjs) {
-        emailjs.init("1bDA6vW1zOjHQYXeL");
-      }
-    });
+  function initEmailJS() {
+    if (window.emailjs && !window.emailjs.__ypascent_initialized) {
+      emailjs.init("1bDA6vW1zOjHQYXeL");
+      window.emailjs.__ypascent_initialized = true;
+    }
   }
+
+  if (window.emailjs) {
+    initEmailJS();
+  }
+
+  document.addEventListener('DOMContentLoaded', initEmailJS);
+  window.addEventListener('load', initEmailJS);
+
+  const emailJsCheck = setInterval(() => {
+    if (window.emailjs) {
+      initEmailJS();
+      clearInterval(emailJsCheck);
+    }
+  }, 200);
 })();
 
 function sendEmail(event) {
   event.preventDefault();
-  if (!window.emailjs) {
-    alert('Email service is not loaded yet. Please try again.');
+  if (!window.emailjs || !window.emailjs.__ypascent_initialized) {
+    alert('Email service is not loaded yet. Please wait a moment and try again.');
     return;
   }
   emailjs.sendForm('service_ilp7779', 'template_kkr3z12', event.target)
