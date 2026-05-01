@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — YP Ascent Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">YP Ascent <span>Partners</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#why">Why Join</a></li>
+    <li><a href="index.html#roles">Open Roles</a></li>
+    <li><a href="about.html#culture">Culture</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-label">04 — Contact</div>
+  <h1 class="page-hero-title">Ready to<br><em>Talk?</em></h1>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div>
+    <p class="contact-sub reveal">We review every submission personally. If your background aligns with what we're building, you'll hear from us directly — not a recruiter.</p>
+    <div class="contact-details">
+      <div class="reveal">
+        <div class="contact-detail-label">Taipei Office</div>
+        <div class="contact-detail-val">World Trade Center, Taipei, Taiwan</div>
+      </div>
+      <div class="reveal">
+        <div class="contact-detail-label">Registered Fund</div>
+        <div class="contact-detail-val">Singapore, Republic of Singapore</div>
+      </div>
+      <div class="reveal">
+        <div class="contact-detail-label">Careers</div>
+        <div class="contact-detail-val"><a href="mailto:hr@ypascent.com">hr@ypascent.com</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form reveal">
+    <form id="contactForm" onsubmit="sendEmail(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input type="text" name="first_name" class="form-input" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input type="text" name="last_name" class="form-input" placeholder="Chen" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-input" placeholder="jane@example.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Role of Interest</label>
+        <input type="text" name="role" class="form-input" placeholder="e.g. Senior AI Engineer" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tell us about yourself</label>
+        <textarea name="message" class="form-textarea" placeholder="Your background, what you're working on, and why YP Ascent..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">YP Ascent <span>Partners</span></div>
+  <div class="footer-copy">© 2025 YP Ascent Partners Limited. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="index.html#roles">Careers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs.min.js"></script>
+</body>
+</html>
