@@ -16,6 +16,55 @@ const observer = new IntersectionObserver((entries) => {
 
 reveals.forEach(el => observer.observe(el));
 
+// Carousel functionality
+(function() {
+  const images = document.querySelectorAll('.carousel-image');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const labels = document.querySelectorAll('.carousel-label');
+  let currentIndex = 0;
+  let autoplayInterval;
+
+  function showImage(index) {
+    // Remove active class from all
+    images.forEach(img => img.classList.remove('carousel-active'));
+    dots.forEach(dot => dot.classList.remove('carousel-dot-active'));
+    labels.forEach(label => label.classList.remove('carousel-label-active'));
+    
+    // Add active class to current
+    images[index].classList.add('carousel-active');
+    dots[index].classList.add('carousel-dot-active');
+    labels[index].classList.add('carousel-label-active');
+    
+    currentIndex = index;
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextImage, 4000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+
+  // Dot click handlers
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showImage(index);
+      resetAutoplay();
+    });
+  });
+
+  // Start autoplay
+  startAutoplay();
+})();
+
+
 // EmailJS initialization and form submission
 (function() {
   emailjs.init("1bDA6vW1zOjHQYXeL");
